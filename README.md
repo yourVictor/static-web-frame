@@ -191,7 +191,7 @@ static-web-frame
   </tr>
   <tr>
     <td bgcolor=rgb(0,10,0)>pluginsPath </td>
-    <td> object </td>
+    <td> string </td>
     <td> 项目用到的插件路径，*这个参数一般由后台开发人员提供*  </td>
     <td> 默认值：'plugins' </td>
   </tr>
