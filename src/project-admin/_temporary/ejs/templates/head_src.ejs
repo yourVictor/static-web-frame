@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="renderer" content="webkit">     <!-- content的取值为webkit，ie-comp，ie-stand之一，区分大小写，分别代表用极速模式，兼容模式，IE模式打开。-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keyword" content="keyword">
+    <meta name="description" content="description">
+    <title><%= title %></title>
+
+    <link rel="stylesheet" href="<%= prefixPath %>plugins/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="<%= prefixPath %>plugins/bootstrapValidator/css/bootstrapValidator.min.css"/>
+    <link rel="stylesheet" href="<%= prefixPath %>plugins/animate/animate.min.css"/>
+    <link rel="stylesheet" href="<%= prefixPath %>css/main.css"/>
+    <link rel="stylesheet" href="<%= prefixPath %>css/<%= cssName %>.css"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="<%= prefixPath %>plugins/require/require-2.3.5.js"></script>
+    <script src="<%= prefixPath %>js/main.js" id="mainJs" data-plugins-path="<%= prefixPath %>plugins"></script>

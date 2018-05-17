@@ -1,0 +1,29 @@
+//
+// @name: flexLayout
+// @access: public
+//
+@import "../abstract/mixins";
+
+.flex-container{
+  @include flex-container;
+}
+.flex-column-container{
+  @include flex-container($direction: column);
+}
+
+.flex-a-center{
+  @include a-center;
+}
+.flex-j-center{
+  @include j-center;
+}
+.flex-center{
+  @include center;
+}
+
+.flex-a-end{
+  @include a-end;
+}
+.flex-j-end{
+  @include j-end;
+}

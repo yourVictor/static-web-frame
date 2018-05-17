@@ -1,0 +1,10 @@
+@import
+'../abstract/_variables',
+'../abstract/_mixins';
+
+.mask{
+  @include mask;
+}
+.mask-transparent{
+  @include mask(0);
+}

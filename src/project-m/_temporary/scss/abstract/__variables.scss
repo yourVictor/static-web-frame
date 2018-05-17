@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+//global css---------------------------------------------------
+$designWidth: 750;
+$maxWidth: 768px;                             //numbers or none
+$red: 71;
+$green: 187;
+$blue: 91;
+
+//global function----------------------------------------------
+@function pr($px){
+  @return $px*320/$designWidth/20 + rem;
+}
+
+//body css set-------------------------------------------------
+$normalColor: #494949;
+$subColor: #8f8f8f;
+$inputHolderColor: #d9d9d9;
+$borderColor: #e4e4e4;
+$subBorderColor: #efefef;
+$shadowColor: rgba(214, 220, 226, 0.15);
+$activeColor: rgb($red,$green,$blue);
+$bodyBgColor: #f6f7f9;
+
+$normalFontSize: pr(28);
