@@ -2,6 +2,10 @@
 
 > web前端(静态页项目)构建框架【构建完交给后台同学去发挥，你就可以下班了】
 
+
+> 本项目基于sass & ejs & gulp 相关技术
+
+> 本项目包含三个终端用户：即：admin后台管理系统端、pc端、m移动端，可根据需要只用其中的某个端
 ## Build Setup
 
 ``` bash
@@ -25,7 +29,7 @@ npm run build
 ```
 static-web-frame
  ├─dist [编译后的项目代码，可以直接交给后端童鞋的代码]
- |   ├─curriculum-pc-view [项目pc端可以直接预览效果的代码]
+ |   ├─curriculum-pc-view [pc端可以直接打开预览效果的代码]
  |   |         ├─index.html
  |   |         ├─js
  |   |         | ├─common-722ec8659e.js
@@ -33,7 +37,7 @@ static-web-frame
  |   |         ├─css
  |   |         |  ├─index-d41d8cd98f.css
  |   |         |  └main-6c763fd116.css
- |   ├─curriculum-pc  [项目pc端交给后端童鞋对接的代码]
+ |   ├─curriculum-pc  [pc端交给后端童鞋对接的代码]
  |   |       ├─index.html
  |   |       ├─js
  |   |       | ├─common-722ec8659e.js
@@ -41,7 +45,7 @@ static-web-frame
  |   |       ├─css
  |   |       |  ├─index-d41d8cd98f.css
  |   |       |  └main-6c763fd116.css
- |   ├─curriculum-m-view  [项目m端可以直接预览效果的代码]
+ |   ├─curriculum-m-view  [m端可以直接打开预览效果的代码]
  |   |         ├─index.html
  |   |         ├─js
  |   |         | ├─common-722ec8659e.js
@@ -49,7 +53,7 @@ static-web-frame
  |   |         ├─css
  |   |         |  ├─index-d41d8cd98f.css
  |   |         |  └main-6c763fd116.css
- |   ├─curriculum-m  [项目m端交给后端童鞋对接的代码]
+ |   ├─curriculum-m  [m端交给后端童鞋对接的代码]
  |   |      ├─index.html
  |   |      ├─js
  |   |      | ├─common-722ec8659e.js
@@ -57,7 +61,7 @@ static-web-frame
  |   |      ├─css
  |   |      |  ├─index-d41d8cd98f.css
  |   |      |  └main-6c763fd116.css
- |   ├─curriculum-admin-view  [项目admin端可以直接预览效果的代码]
+ |   ├─curriculum-admin-view  [admin端可以直接打开预览效果的代码]
  |   |           ├─index.html
  |   |           ├─js
  |   |           | ├─common-722ec8659e.js
@@ -65,7 +69,7 @@ static-web-frame
  |   |           ├─css
  |   |           |  ├─index-d41d8cd98f.css
  |   |           |  └main-6c763fd116.css
- |   ├─curriculum-admin  [项目admin端交给后端童鞋对接的代码]
+ |   ├─curriculum-admin  [admin端交给后端童鞋对接的代码]
  |   |        ├─index.html
  |   |        ├─js
  |   |        | ├─common-722ec8659e.js
@@ -75,16 +79,16 @@ static-web-frame
  |   |        |  └main-6c763fd116.css
  |
  ├─src [项目源码]
- |  ├─project-admin [项目admin端源码]
+ |  ├─project-admin [admin端源码]
  |  |     ├─js [项目admin端js]
  |  |     | ├─common.js
  |  |     | └main.js
- |  |     ├─css [项目admin端css,自动构建生成的，不用手动修改]
+ |  |     ├─css [项目admin端css,自动构建生成的，不用手动编写修改]
  |  |     |  ├─index.css
  |  |     |  └main.css
- |  |     ├─_temporary [项目admin端_temporary,放置ejs和scss文件]
+ |  |     ├─_temporary [admin端_temporary,放置ejs和scss文件]
  |  |     |     ├─scss
- |  |     |     |  ├─main.scss [组合用到的相关scss，作为所有页面共用的一个css文件]
+ |  |     |     |  ├─main.scss [所有页面共用的一个scss文件]
  |  |     |     |  ├─theme  [放置主题scss文件:default,...]
  |  |     |     |  |   └_default.scss
  |  |     |     |  ├─page [放置页面scss文件:pop,...]
@@ -107,9 +111,9 @@ static-web-frame
  |  |     |     |  |     └head_src.ejs
  |  |     |     |  ├─pages  [放置页面ejs文件]
  |  |     |     |  |   └index.ejs   
- |  ├─project-pc [项目pc端源码] 
+ |  ├─project-pc [pc端源码] 
  |  |     ├─ ...
- |  ├─project-m [项目m端源码]
+ |  ├─project-m [m端源码]
  |  |     ├─ ...
  ├─gulpfile.js [gulp配置文件]
  ├─package.json [项目依赖]
@@ -188,9 +192,11 @@ static-web-frame
   <tr>
     <td bgcolor=rgb(0,10,0)>pluginsPath </td>
     <td> object </td>
-    <td> 项目用到的插件路径，这个参数一般后台开发人员提供  </td>
+    <td> 项目用到的插件路径，*这个参数一般由后台开发人员提供*  </td>
     <td> 默认值：'plugins' </td>
   </tr>
 </table>
+
+欢迎大家疯狂star，疯狂提issue。
 
 Copyright (c) 2018-present Mole
