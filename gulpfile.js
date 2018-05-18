@@ -22,6 +22,7 @@
 		ejs = require('gulp-ejs'),                     //ejs to html
 		compressHtml = require('gulp-htmlmin'),        //html压缩
 		del = require('del'),                          //删除文件
+		notify = require("gulp-notify"),               //handle error
 		gulpSequence = require('gulp-sequence');       //顺序执行任务
 
     let projectConfig = require("./projectConfig"),
@@ -68,6 +69,17 @@
 	    return del([`${dist}/**/*`, revFile, srcHtmlFile], cb);
     });
 
+	let handleErrors = function () {
+		let args = Array.prototype.slice.call(arguments);
+
+		notify.onError({
+			title: 'build error',
+			message: '<%=error.message %>'
+		}).apply(this, args);//替换为当前对象
+
+		this.emit("end");//提交
+	};
+
     //build plugins task
     gulp.task('plugins', function () {
         return gulp.src(pluginsFile)
@@ -77,7 +89,7 @@
     //build sass task
     gulp.task('sass', function () {
         return gulp.src(scssFile)
-            .pipe(sass())
+	        .pipe(sass().on('error', handleErrors))
             .pipe(gulp.dest(cssSrc));
     });
     gulp.task('cssOperate', function () {
@@ -188,7 +200,7 @@
     //build html task
     gulp.task('ejs', function () {
         return gulp.src(ejsFile)
-            .pipe(ejs({}, {}, {ext: '.html'}))
+	        .pipe(ejs({}, {}, {ext: '.html'}).on('error', handleErrors))
             .pipe(gulp.dest(htmlSrc));
     });
     gulp.task('htmlOperate', function () {
