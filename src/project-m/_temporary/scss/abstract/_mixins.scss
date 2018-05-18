@@ -71,6 +71,15 @@
 }
 
 //
+// @name: transition
+// @access: public
+// @param[$time]: time value
+//
+@mixin transition($time: 0.25s){
+  transition: all $time cubic-bezier(0.42,0,0.58,1);
+}
+
+//
 // @name: mask
 // @access: public
 // @param[$opacity]: 0-1

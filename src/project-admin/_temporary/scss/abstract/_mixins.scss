@@ -73,25 +73,6 @@
 }
 
 //
-// @name: mask
-// @access: public
-// @param[$opacity]: 0-1
-// @param[$zIndex]: number
-//
-@mixin mask($opacity: 0.5,$zIndex: 999){
-  opacity: $opacity;
-  background: #000;
-
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: fixed;
-  z-index: $zIndex;
-  display: none;
-}
-
-//
 // @name: scrollbar
 // @access: public
 // @param[$size]: number
@@ -115,4 +96,32 @@
       background-color: $color;
     }
   }
+}
+
+//
+// @name: transition
+// @access: public
+// @param[$time]: time value
+//
+@mixin transition($time: 0.25s){
+  transition: all $time cubic-bezier(0.42,0,0.58,1);
+}
+
+//
+// @name: mask
+// @access: public
+// @param[$opacity]: 0-1
+// @param[$zIndex]: number
+//
+@mixin mask($opacity: 0.5,$zIndex: 999){
+  opacity: $opacity;
+  background: #000;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: $zIndex;
+  display: none;
 }
