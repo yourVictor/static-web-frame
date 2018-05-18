@@ -37,6 +37,7 @@ static-web-frame
  |   |         ├─css
  |   |         |  ├─index-d41d8cd98f.css
  |   |         |  └main-6c763fd116.css
+ |   |         ├─img
  |   ├─curriculum-pc  [pc端交给后端童鞋对接的代码]
  |   |       ├─index.html
  |   |       ├─js
@@ -45,6 +46,7 @@ static-web-frame
  |   |       ├─css
  |   |       |  ├─index-d41d8cd98f.css
  |   |       |  └main-6c763fd116.css
+ |   |       ├─img
  |   ├─curriculum-m-view  [m端可以直接打开预览效果的代码]
  |   |         ├─index.html
  |   |         ├─js
@@ -53,6 +55,7 @@ static-web-frame
  |   |         ├─css
  |   |         |  ├─index-d41d8cd98f.css
  |   |         |  └main-6c763fd116.css
+ |   |         ├─img
  |   ├─curriculum-m  [m端交给后端童鞋对接的代码]
  |   |      ├─index.html
  |   |      ├─js
@@ -61,6 +64,7 @@ static-web-frame
  |   |      ├─css
  |   |      |  ├─index-d41d8cd98f.css
  |   |      |  └main-6c763fd116.css
+ |   |      ├─img
  |   ├─curriculum-admin-view  [admin端可以直接打开预览效果的代码]
  |   |           ├─index.html
  |   |           ├─js
@@ -69,6 +73,7 @@ static-web-frame
  |   |           ├─css
  |   |           |  ├─index-d41d8cd98f.css
  |   |           |  └main-6c763fd116.css
+ |   |           ├─img
  |   ├─curriculum-admin  [admin端交给后端童鞋对接的代码]
  |   |        ├─index.html
  |   |        ├─js
@@ -77,6 +82,7 @@ static-web-frame
  |   |        ├─css
  |   |        |  ├─index-d41d8cd98f.css
  |   |        |  └main-6c763fd116.css
+ |   |        ├─img
  |
  ├─src [项目源码]
  |  ├─project-admin [admin端源码]
@@ -86,6 +92,7 @@ static-web-frame
  |  |     ├─css [项目admin端css,自动构建生成的，不用手动编写修改]
  |  |     |  ├─index.css
  |  |     |  └main.css
+ |  |     ├─img [项目admin端img目录]
  |  |     ├─_temporary [admin端_temporary,放置ejs和scss文件]
  |  |     |     ├─scss
  |  |     |     |  ├─main.scss [所有页面共用的一个scss文件]
