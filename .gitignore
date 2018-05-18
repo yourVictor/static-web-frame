@@ -66,3 +66,4 @@ typings/
 # Editor directories and files
 .idea
 .idea/
+.DS_Store
