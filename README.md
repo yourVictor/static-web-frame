@@ -20,7 +20,10 @@ npm install or cnpm install
 npm start
 
 # build for production with minification || 编译项目，将编译后的代码交给后端开发人员，自己就可以下班了
-npm run build
+npm run build-admin 编译admin端项目
+npm run build-pc  编译pc端项目
+npm run build-m  编译m端项目
+npm run build  编译整个项目
 
 ```
 
