@@ -93,7 +93,7 @@ static-web-frame
  |  |     |  ├─index.css
  |  |     |  └main.css
  |  |     ├─img [项目admin端img目录]
- |  |     ├─_temporary [admin端_temporary,放置ejs和scss文件]
+ |  |     ├─_temporary [admin端_temporary,放置ejs、js和scss文件]
  |  |     |     ├─scss
  |  |     |     |  ├─main.scss [所有页面共用的一个scss文件]
  |  |     |     |  ├─theme  [放置主题scss文件:default,...]
