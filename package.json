@@ -28,9 +28,13 @@
     "requirejs": "^2.3.5"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-remove-strict-mode": "^0.0.2",
+    "babel-preset-env": "^1.7.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
     "gulp-batch": "^1.0.5",
     "gulp-clean-css": "^3.9.4",
     "gulp-ejs": "^3.1.3",

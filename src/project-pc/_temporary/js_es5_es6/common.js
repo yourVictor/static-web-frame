@@ -8,10 +8,10 @@
 	'use strict';
 
 	define(['jquery'],function($){
-		var $body = $("body");
-		var ua = navigator.userAgent.toLowerCase();
-		var eventType = ua.match('android')?'click':'tap';
-		var SMS_TIME = 60;
+		let $body = $("body");
+		let ua = navigator.userAgent.toLowerCase();
+		let eventType = ua.match('android')?'click':'tap';
+		let SMS_TIME = 60;
 
 		$body.delegate("input[readonly]","click",function () {
 			document.activeElement.blur();
@@ -20,15 +20,15 @@
 			ua : ua,
 			eventType : eventType,
 			getQueryString: function (name) {
-				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-				var r = window.location.search.substr(1).match(reg);
+				let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				let r = window.location.search.substr(1).match(reg);
 				if (r != null)
 					return decodeURI(r[2]);
 				return null;
 			},
 			getVerifyCode: function ($obj) {
-				var time = SMS_TIME;
-				var timer = setInterval(function () {
+				let time = SMS_TIME;
+				let timer = setInterval(function () {
 					if(time>0){
 						$obj.text(time+'s后重新获取');
 						$obj.addClass('disabled');

@@ -7,7 +7,7 @@
 (function () {
 	'use strict';
 
-	var pluginsPath = document.getElementById('mainJs').getAttribute('data-plugins-path');
+	let pluginsPath = document.getElementById('mainJs').getAttribute('data-plugins-path');
 	require.config({
 		baseUrl: pluginsPath,
 		paths: {
@@ -15,7 +15,7 @@
 			"jquery": "jquery/jquery-3.3.1.min",
 			"bootstrap": "bootstrap/js/bootstrap.min",
 			"bootstrapValidator": "bootstrapValidator/js/bootstrapValidator.min",
-			"common": "../js/common"
+			"common": "./common"
 		},
 		shim: {
 			"clipboard": {

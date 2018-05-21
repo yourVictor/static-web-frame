@@ -16,6 +16,7 @@
 		autoPrefix = require('gulp-autoprefixer'),     //自动加前缀;
 		compressCss = require('gulp-clean-css'),       //压缩CSS
 		jshint = require('gulp-jshint'),               //js代码校验
+		babel = require('gulp-babel'),                 //es6转es5
 		compressJs = require('gulp-uglify'),           //压缩js
 		replace = require('gulp-replace'),             //合并文件
 		compressImg = require('gulp-imagemin'),        //图片压缩
@@ -32,7 +33,7 @@
     let cssRev,jsRev,imgRev,revJson;
     let dist,cssDist,jsDist,imgDist,pluginsDist,htmlDist;
     let src,cssSrc,jsSrc,htmlSrc;
-    let scssFile,srcCssFile,distCssFile,srcJsFile,distJsFile,imgFile,pluginsFile,ejsFile,revFile,srcHtmlFile,distHtmlFile;
+    let scssFile,srcCssFile,distCssFile,srcJsFile,srcJsES5ES6File,distJsFile,imgFile,pluginsFile,ejsFile,revFile,srcHtmlFile,distHtmlFile;
 
     //set path task
     gulp.task('set-path', function (cb) {
@@ -57,6 +58,7 @@
         scssFile = [`${src}/_temporary/scss/*.scss`,`${src}/_temporary/scss/page/*.scss`];
         srcCssFile = `${src}/css/**/*.css`;
         distCssFile = `${dist}/css/**/*.css`;
+	    srcJsES5ES6File = `${src}/_temporary/js_es5_es6/**/*.js`;
         srcJsFile = `${src}/js/**/*.js`;
         distJsFile = `${dist}/js/**/*.js`;
         imgFile = `${src}/img/**/*`;
@@ -130,6 +132,14 @@
     });
 
     //build js task
+	gulp.task('jsBabel', function () {
+		return gulp.src(srcJsES5ES6File)
+			.pipe(babel({
+				presets: ['env'],
+				plugins: ["transform-remove-strict-mode"]
+			}))
+			.pipe(gulp.dest(jsSrc));
+	});
     gulp.task('jshint', function () {
         return gulp.src(srcJsFile)
             .pipe(jshint())
@@ -236,7 +246,8 @@
     gulp.task('build',function (cb) {
         gulpSequence(
 	        ['set-path'],
-            ['sass','jshint','plugins','ejs'],
+            ['sass','jsBabel','plugins','ejs'],
+            ['jshint'],
             ['cssOperate','jsOperate','imgOperate','htmlOperate'],
             ['revCollectorCss','revCollectorJs'],
             ['revCollectorHtml'],

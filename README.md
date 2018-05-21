@@ -86,7 +86,7 @@ static-web-frame
  |
  ├─src [项目源码]
  |  ├─project-admin [admin端源码]
- |  |     ├─js [项目admin端js]
+ |  |     ├─js [项目admin端js,自动构建生成的，不用手动编写修改]
  |  |     | ├─common.js
  |  |     | └main.js
  |  |     ├─css [项目admin端css,自动构建生成的，不用手动编写修改]
@@ -113,6 +113,9 @@ static-web-frame
  |  |     |     |  ├─abstract [放置抽象scss文件:scss参数和mixins]
  |  |     |     |  |    ├─__variables.scss
  |  |     |     |  |    └_mixins.scss
+ |  |     |     ├─js_es5_es6  [放置js源码，支持写法：es5,es6,...]
+ |  |     |     |  ├─common.js 
+ |  |     |     |  └main.js 
  |  |     |     ├─ejs
  |  |     |     |  ├─templates  [放置模板ejs文件]
  |  |     |     |  |     └head_src.ejs
