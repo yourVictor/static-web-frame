@@ -3,7 +3,7 @@
 > web前端(静态页项目)构建框架【构建完交给后台同学去发挥，你就可以下班了】
 
 
-> 本项目基于sass & ejs & gulp & requireJs & nodeJs 相关技术
+> 本项目基于sass & ejs & gulp & requireJs & nodeJs & babel 相关技术
 
 > 本项目包含三个终端用户：即：admin后台管理系统端、pc端、m移动端，可根据需要只用其中的某个端
 ## Build Setup
