@@ -27,7 +27,7 @@ input {
   text-decoration: none;
 }
 input{
-  user-select: inherit;
+  user-select: text;
   -webkit-appearance: none;
 
   &:read-only{
