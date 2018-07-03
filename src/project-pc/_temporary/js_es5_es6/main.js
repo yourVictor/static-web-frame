@@ -15,7 +15,7 @@
 			"jquery": "jquery/jquery-3.3.1.min",
 			"bootstrap": "bootstrap/js/bootstrap.min",
 			"bootstrapValidator": "bootstrapValidator/js/bootstrapValidator.min",
-			"common": "./common"
+			"common": "../js/common"
 		},
 		shim: {
 			"clipboard": {

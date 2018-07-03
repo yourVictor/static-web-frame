@@ -13,7 +13,7 @@
 		paths: {
 			"clipboard": "clipboard/clipboard.min",
 			"jquery": "jquery/jquery-3.3.1.min",
-			"common": "./common"
+			"common": "../js/common"
 		},
 		shim: {
 			"clipboard": {

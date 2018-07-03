@@ -342,35 +342,45 @@
 
 	//run develop mode
 	gulp.task('run-dev', function () {
-		watch([`src/project-admin/_temporary/scss/**/*.scss`,`src/project-admin/_temporary/ejs/**/*.ejs`], batch(function (events, done) {
+		watch([`src/project-admin/_temporary/scss/**/*.scss`,
+			`src/project-admin/_temporary/ejs/**/*.ejs`,
+			`src/project-admin/_temporary/js/**/*.js`
+		], batch(function (events, done) {
 			console.log("");
 			console.log("start run project-admin:");
 			currentProject = 'admin';
 			gulpSequence(
 				['set-path'],
+				['jsBabel'],
 				['sass'],
 				['ejs'],
 				done
 			);
 		}));
-		watch([`src/project-pc/_temporary/scss/**/*.scss`,`src/project-pc/_temporary/ejs/**/*.ejs`], batch(function (events, done) {
+		watch([`src/project-pc/_temporary/scss/**/*.scss`,
+			`src/project-pc/_temporary/ejs/**/*.ejs`,
+			`src/project-pc/_temporary/js/**/*.js`], batch(function (events, done) {
 			console.log("");
 			console.log("start run project-pc:");
 			currentProject = 'pc';
 			gulpSequence(
 				['set-path'],
+				['jsBabel'],
 				['sass'],
 				['ejs'],
 				done
 			);
 		}));
-		watch([`src/project-m/_temporary/scss/**/*.scss`,`src/project-m/_temporary/ejs/**/*.ejs`], batch(function (events, done) {
+		watch([`src/project-m/_temporary/scss/**/*.scss`,
+			`src/project-m/_temporary/ejs/**/*.ejs`,
+			`src/project-m/_temporary/js/**/*.js`], batch(function (events, done) {
 			console.log("");
 			console.log("start run project-m:");
 			console.log("---------------------------");
 			currentProject = 'm';
 			gulpSequence(
 				['set-path'],
+				['jsBabel'],
 				['sass'],
 				['ejs'],
 				done
