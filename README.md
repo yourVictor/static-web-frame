@@ -32,7 +32,7 @@ npm run build  编译整个项目
 ```
 static-web-frame
  ├─dist [编译后的项目代码，可以直接交给后端童鞋的代码]
- |   ├─curriculum-pc-view [pc端可以直接打开预览效果的代码]
+ |   ├─[项目名称]-pc-view [pc端可以直接打开预览效果的代码]
  |   |         ├─index.html
  |   |         ├─js
  |   |         | ├─common-722ec8659e.js
@@ -41,7 +41,7 @@ static-web-frame
  |   |         |  ├─index-d41d8cd98f.css
  |   |         |  └main-6c763fd116.css
  |   |         ├─img
- |   ├─curriculum-pc  [pc端交给后端童鞋对接的代码]
+ |   ├─[项目名称]-pc  [pc端交给后端童鞋对接的代码]
  |   |       ├─index.html
  |   |       ├─js
  |   |       | ├─common-722ec8659e.js
@@ -50,7 +50,7 @@ static-web-frame
  |   |       |  ├─index-d41d8cd98f.css
  |   |       |  └main-6c763fd116.css
  |   |       ├─img
- |   ├─curriculum-m-view  [m端可以直接打开预览效果的代码]
+ |   ├─[项目名称]-m-view  [m端可以直接打开预览效果的代码]
  |   |         ├─index.html
  |   |         ├─js
  |   |         | ├─common-722ec8659e.js
@@ -59,7 +59,7 @@ static-web-frame
  |   |         |  ├─index-d41d8cd98f.css
  |   |         |  └main-6c763fd116.css
  |   |         ├─img
- |   ├─curriculum-m  [m端交给后端童鞋对接的代码]
+ |   ├─[项目名称]-m  [m端交给后端童鞋对接的代码]
  |   |      ├─index.html
  |   |      ├─js
  |   |      | ├─common-722ec8659e.js
@@ -68,7 +68,7 @@ static-web-frame
  |   |      |  ├─index-d41d8cd98f.css
  |   |      |  └main-6c763fd116.css
  |   |      ├─img
- |   ├─curriculum-admin-view  [admin端可以直接打开预览效果的代码]
+ |   ├─[项目名称]-admin-view  [admin端可以直接打开预览效果的代码]
  |   |           ├─index.html
  |   |           ├─js
  |   |           | ├─common-722ec8659e.js
@@ -77,7 +77,7 @@ static-web-frame
  |   |           |  ├─index-d41d8cd98f.css
  |   |           |  └main-6c763fd116.css
  |   |           ├─img
- |   ├─curriculum-admin  [admin端交给后端童鞋对接的代码]
+ |   ├─[项目名称]-admin  [admin端交给后端童鞋对接的代码]
  |   |        ├─index.html
  |   |        ├─js
  |   |        | ├─common-722ec8659e.js

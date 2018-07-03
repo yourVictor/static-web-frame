@@ -344,7 +344,7 @@
 	gulp.task('run-dev', function () {
 		watch([`src/project-admin/_temporary/scss/**/*.scss`,
 			`src/project-admin/_temporary/ejs/**/*.ejs`,
-			`src/project-admin/_temporary/js/**/*.js`
+			`src/project-admin/_temporary/js_es5_es6/**/*.js`
 		], batch(function (events, done) {
 			console.log("");
 			console.log("start run project-admin:");
@@ -359,7 +359,7 @@
 		}));
 		watch([`src/project-pc/_temporary/scss/**/*.scss`,
 			`src/project-pc/_temporary/ejs/**/*.ejs`,
-			`src/project-pc/_temporary/js/**/*.js`], batch(function (events, done) {
+			`src/project-pc/_temporary/js_es5_es6/**/*.js`], batch(function (events, done) {
 			console.log("");
 			console.log("start run project-pc:");
 			currentProject = 'pc';
@@ -373,7 +373,7 @@
 		}));
 		watch([`src/project-m/_temporary/scss/**/*.scss`,
 			`src/project-m/_temporary/ejs/**/*.ejs`,
-			`src/project-m/_temporary/js/**/*.js`], batch(function (events, done) {
+			`src/project-m/_temporary/js_es5_es6/**/*.js`], batch(function (events, done) {
 			console.log("");
 			console.log("start run project-m:");
 			console.log("---------------------------");
